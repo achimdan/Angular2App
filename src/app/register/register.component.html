@@ -1,0 +1,70 @@
+
+<div class="register-container">
+	<div class="user-icon">
+		<i class="material-icons user-icon-i">person</i>
+		<span class="user-text">REGISTER</span>
+	</div>
+	<form novalidate #f="ngForm" (submit)="login(credentials)">
+		<!--<md-chip-list>
+			<md-chip color="primary" 
+				class="chips"
+				selected="isSelected" 
+				(click)="userType('client')">
+				Client
+			</md-chip>
+			<md-chip color="accent"
+				class="chips" 
+				selected="isSelected"
+				(click)="userType('stylist')">
+				Stylist
+			</md-chip>
+		</md-chip-list>-->
+
+		<md-button-toggle-group #group="mdButtonToggleGroup" class="user-type">
+			<md-button-toggle value="left" (click)="userType('client')" class="user-type-btn">
+				Client
+			</md-button-toggle>
+			<md-button-toggle value="center" (click)="userType('stylist')" class="user-type-btn">
+				Stylist
+			</md-button-toggle>
+		</md-button-toggle-group>
+		
+		<md-input-container class="input-full-width">
+			<input mdInput [(ngModel)]="credentials.email" 
+				name="email" 
+				type="email"
+				placeholder="Email">
+		</md-input-container>
+		<md-input-container class="input-full-width">
+			<input mdInput [(ngModel)]="credentials.username" 
+				name="username" 
+				placeholder="Username">
+		</md-input-container>
+		<md-input-container class="input-full-width">
+			<input mdInput [(ngModel)]="credentials.password" 
+				name="password" 
+				type="password" 
+				placeholder="Password">
+		</md-input-container>
+		<md-input-container class="input-full-width">
+			<input mdInput [(ngModel)]="credentials.confirmPassword" 
+				name="confirmPassword" 
+				type="confirmPassword" 
+				placeholder="Confirm Password">
+		</md-input-container>
+		<div class="register">
+			<a routerLink="/login">Login</a>
+		</div>
+		<button md-raised-button 
+			href="url" 
+			type="submit" 
+			id="button-id" 
+			class="md-primary btn-login" 
+			ng-disabled="true" 
+			md-ripple-size="full"
+			md-no-ink="true" 
+			aria-label="button-label"> 
+			REGISTER
+		</button>
+	</form>
+</div>

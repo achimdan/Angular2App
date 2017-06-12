@@ -8,16 +8,20 @@ import 'hammerjs';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { routing }        from './app.routing';
+import { routing } from './app.routing';
 
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home/home.component';
+import { NavbarComponent } from './home/navbar/navbar.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

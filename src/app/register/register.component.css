@@ -1,4 +1,4 @@
-.login-container {
+.register-container {
     width: 30%;
     margin: 100px auto 0;
     background: white;
@@ -21,7 +21,7 @@
 
 .user-text {
     color: #6d6d6d;
-    margin: 20px;
+    margin: 20px 0;
     display: block;
 }
 
@@ -46,4 +46,11 @@
     width: 200px;
     background: #2979FF;
     color: white;
+}
+
+.user-type {
+    
+}
+.user-type-btn {
+
 }

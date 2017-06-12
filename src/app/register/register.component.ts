@@ -4,37 +4,36 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../_services/auth.service'
 
 @Component({
-	selector: 'app-login',
-	templateUrl: './login.component.html',
-	styleUrls: ['./login.component.css'],
+	selector: 'app-register',
+	templateUrl: './register.component.html',
+	styleUrls: ['./register.component.css'],
 	providers: [AuthService]
 })
-export class LoginComponent implements OnInit {
+export class RegisterComponent implements OnInit {
 
 	credentials: credentials;
-	returnUrl: string;
+	isSelected = false;
 
 	constructor(private authService: AuthService, private router: Router, private route: ActivatedRoute) {
 		this.credentials = {
 			email: '',
 			username: '',
-			password: '',
-			confirmPassword: ''
-		}
-
+			password: ''
+		};
 	}
 
 	ngOnInit() {
-		this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-	}
-	
-	login () {
-		this.authService.login(this.credentials)
-			.subscribe(data => {
-				this.router.navigate(['/home']);
-			})
+		this.isSelected = false;
 	}
 
+	userType(type) {
+		console.log(type);
+		this.isSelected = true;
+	}
+
+	register() {
+		console.log(this.credentials);
+	}
 
 }
 
@@ -42,6 +41,4 @@ interface credentials {
 	email: string,
 	username: string,
 	password: string,
-	confirmPassword: string
 }
-
