@@ -1,0 +1,39 @@
+<form novalidate #f="ngForm" (submit)="login(credentials)">
+	
+	<md-input-container class="example-full-width">
+		<input mdInput [(ngModel)]="credentials.email" 
+			name="email" 
+			type="email"
+			placeholder="Email">
+	</md-input-container>
+	
+	<md-input-container class="example-full-width">
+		<input mdInput [(ngModel)]="credentials.username" 
+			name="username" 
+			placeholder="Username">
+	</md-input-container>
+
+	<md-input-container class="example-full-width">
+		<input mdInput [(ngModel)]="credentials.password" 
+			name="password" 
+			type="password" 
+			placeholder="Password">
+	</md-input-container>
+
+	<button md-raised-button 
+		href="url" 
+		type="submit" 
+		id="button-id" 
+		class="md-primary" 
+		ng-disabled="true" 
+		md-ripple-size="full"
+		md-no-ink="true" 
+		aria-label="button-label"> 
+		button-label 
+	</button>
+
+</form>
+
+<md-card>
+	{{ f.value | json}}
+</md-card>
