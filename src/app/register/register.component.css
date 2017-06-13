@@ -49,8 +49,24 @@
 }
 
 .user-type {
-    
+    width: 100%;
+    margin-bottom: 40px;
 }
 .user-type-btn {
+    width: 49%;
+    padding: 10px;
+    margin: 1%;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+}
 
+.mat-button-toggle-checked {
+    background: #2979ff;
+    color: white;
+}
+
+.user-type-btn span {
+    display: block;
+    height: 100%;
+    line-height: 100px;
 }

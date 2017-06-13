@@ -19,13 +19,15 @@
 				Stylist
 			</md-chip>
 		</md-chip-list>-->
-
+		<label>
+			Choose user type
+		</label>
 		<md-button-toggle-group #group="mdButtonToggleGroup" class="user-type">
 			<md-button-toggle value="left" (click)="userType('client')" class="user-type-btn">
-				Client
+				<span>Client</span>
 			</md-button-toggle>
 			<md-button-toggle value="center" (click)="userType('stylist')" class="user-type-btn">
-				Stylist
+				<span>Stylist</span>
 			</md-button-toggle>
 		</md-button-toggle-group>
 		
@@ -52,6 +54,19 @@
 				type="confirmPassword" 
 				placeholder="Confirm Password">
 		</md-input-container>
+
+		<label>
+			Gender
+		</label>
+		<md-button-toggle-group #group="mdButtonToggleGroup" class="user-type">
+			<md-button-toggle value="left" (click)="userType('client')" class="user-type-btn">
+				<md-icon>face</md-icon>
+			</md-button-toggle>
+			<md-button-toggle value="center" (click)="userType('stylist')" class="user-type-btn">
+				<md-icon>mood</md-icon>
+			</md-button-toggle>
+		</md-button-toggle-group>
+
 		<div class="register">
 			<a routerLink="/login">Login</a>
 		</div>
