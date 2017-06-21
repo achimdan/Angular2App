@@ -14,10 +14,16 @@
 	</ngb-rating>-->
 	<hr>
 	<pre>Rate: <b>{{currentRate}}</b></pre>
+	<div class="row">
+		<div class="col-5">csfcas</div>
+	</div>
 </div>
 
 
-<div [(ngModel)]="model" ngbRadioGroup name="radioBasic">
+
+<div [(ngModel)]="model"
+     ngbRadioGroup
+     name="radioBasic">
 	<label class="btn btn-primary">
     <input type="radio" [value]="1"> Left (pre-checked)
   </label>
