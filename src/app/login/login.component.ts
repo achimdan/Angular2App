@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { AuthService } from '../_services/auth.service'
@@ -9,14 +9,14 @@ import { AuthService } from '../_services/auth.service'
 	styleUrls: ['./login.component.css'],
 	providers: [AuthService]
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
 
 	credentials: credentials;
 	returnUrl: string;
 
 	constructor(private authService: AuthService, private router: Router, private route: ActivatedRoute) {
 		this.credentials = {
-			email: '',
+			// email: '',
 			username: '',
 			password: '',
 			confirmPassword: ''
@@ -35,11 +35,15 @@ export class LoginComponent implements OnInit {
 			})
 	}
 
+	ngOnDestroy() {
+		console.log('destroy');
+	}
+
 
 }
 
 interface credentials {
-	email: string,
+	// email: string,
 	username: string,
 	password: string,
 	confirmPassword: string
