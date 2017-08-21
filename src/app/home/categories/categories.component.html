@@ -1,0 +1,12 @@
+<p>
+  categories works!
+</p>
+
+<md-nav-list>
+	<md-list-item *ngFor="let data of categories">
+		{{data.title}}
+		<button md-icon-button (click)="showInfo(data)">
+			<md-icon>info</md-icon>
+		</button>
+	</md-list-item>
+</md-nav-list>

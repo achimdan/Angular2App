@@ -13,10 +13,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 
+import { ConfigService } from './_services/config.service';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home/home.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
+import { CategoriesComponent } from './home/categories/categories.component';
+import { ProductsComponent } from './home/products/products.component';
+import { DataService } from 'app/_services/data.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     HomeComponent,
     NavbarComponent,
-    RegisterComponent
+    RegisterComponent,
+    CategoriesComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,7 @@ import { RegisterComponent } from './register/register.component';
     NgbModule,
     routing
   ],
-  providers: [],
+  providers: [ConfigService,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
