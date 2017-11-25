@@ -16,7 +16,7 @@ export class DataService {
 	getCategories() {
     // Config + 'categories?page=' + (query.page - 1) + '&size=' + query.limit;
 		return this.http.get('https://jsonplaceholder.typicode.com/albums')
-		// return this.http.get('http://77.81.178.198:25001/onlineShop/categories?page=2/&size=10')
+		// return this.http.get('http://77.81.178.198:25001/onlineShop/products?page=2/&size=10')
 			.map((response: Response) => <Categories[]>response.json());
 	}
 
